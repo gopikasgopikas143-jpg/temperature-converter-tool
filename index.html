@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Temperature Converter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <div class="side-strip">
+    <span>Temp</span>
+    <div class="thermo-icon">🌡️</div>
+    <span>Convert</span>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div>
+        <h1>TEMP<span>°</span><br>CONVERTER</h1>
+      </div>
+      <div class="badge">+ Kelvin</div>
+    </div>
+
+    <div class="input-group">
+      <label for="tempInput">Enter Temperature</label>
+      <input type="number" id="tempInput" placeholder="0" step="any" autocomplete="off"/>
+      <div class="error-msg" id="errorMsg">⚠ Please enter a valid number.</div>
+    </div>
+
+    <label style="margin-bottom:10px;">Convert From</label>
+    <div class="unit-row">
+      <div class="unit-option">
+        <input type="radio" name="unit" id="cel" value="C" checked/>
+        <label for="cel">
+          <span class="sym">°C</span>
+          <span class="name">Celsius</span>
+        </label>
+      </div>
+      <div class="unit-option">
+        <input type="radio" name="unit" id="fah" value="F"/>
+        <label for="fah">
+          <span class="sym">°F</span>
+          <span class="name">Fahrenheit</span>
+        </label>
+      </div>
+      <div class="unit-option">
+        <input type="radio" name="unit" id="kel" value="K"/>
+        <label for="kel">
+          <span class="sym">K</span>
+          <span class="name">Kelvin</span>
+        </label>
+      </div>
+    </div>
+
+    <button class="btn-convert" onclick="convert()">CONVERT NOW</button>
+
+    <div class="result-box" id="resultBox">
+      <div class="result-label">Converted Result</div>
+      <div class="result-value" id="resultValue">—</div>
+      <div class="result-unit" id="resultUnit"></div>
+    </div>
+
+    <div class="divider"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
